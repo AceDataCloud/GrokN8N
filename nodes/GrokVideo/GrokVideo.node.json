@@ -1,0 +1,10 @@
+{
+  "node": "@acedatacloud/n8n-nodes-grok-video.grokVideo",
+  "nodeVersion": "1.0",
+  "codexVersion": "1.0",
+  "categories": ["Marketing & Content"],
+  "resources": {
+    "primaryDocumentation": [{ "url": "https://github.com/AceDataCloud/GrokN8N#quick-start" }],
+    "credentialDocumentation": [{ "url": "https://github.com/AceDataCloud/GrokN8N#credentials" }]
+  }
+}
