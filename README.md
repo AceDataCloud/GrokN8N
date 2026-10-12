@@ -2,7 +2,7 @@
 
 Generate one short video, then query the same task until it finishes. This community package connects only the Grok Video service through Ace Data Cloud. The screenshots below show an actual self-hosted n8n 2.42.3 instance in English. n8n Creator Portal verification is pending.
 
-**Package:** `@acedatacloud/n8n-nodes-grok-video` · [Grok Video API and pricing](https://platform.acedata.cloud/documents/grok-videos) · [Source](https://github.com/AceDataCloud/GrokN8N)
+**Package:** `@acedatacloud/n8n-nodes-grok-video` · [Grok Video API and pricing](https://platform.acedata.cloud/documents/grok-videos?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=grokn8n_readme_documents_grok_videos) · [Source](https://github.com/AceDataCloud/GrokN8N)
 
 ## Quick start
 
@@ -14,7 +14,9 @@ In self-hosted n8n, sign in as an owner or admin. Open **Settings → Community 
 
 ### 2. Get an API key with Grok Video access
 
-1. Sign in at [Ace Data Cloud → Applications](https://platform.acedata.cloud/console/applications).
+New account? Register and sign in first. If the Applications page has no General application yet, choose **Initialize General Application**, then continue with the key steps below.
+
+1. Sign in at [Ace Data Cloud → Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=grokn8n_readme_api_key).
 2. Open **General application** and copy its API key, or choose **Manage Keys → Create** for a separate n8n key.
 3. Check Grok Video access, current pricing and balance. If **Allowed APIs** is enabled, include both `/grok/videos` and `/grok/tasks`.
 
@@ -56,7 +58,7 @@ Leave Image URL and Reference Image URLs empty. Check the current six-second pri
 
 Open **Get Task** output. Continue only when `status=succeeded`, `finished=true` and `successful=true`; then open `videoUrls`. If the task is still processing, **do not rerun the full workflow**: that would create another paid video. Use the [query-only workflow](https://github.com/AceDataCloud/GrokN8N/raw/refs/heads/main/examples/query-existing-task.json) with the original task ID and the same credential. The [bounded polling workflow](https://github.com/AceDataCloud/GrokN8N/raw/refs/heads/main/examples/generate-and-wait.json) queries that same ID for up to 30 minutes without creating another task.
 
-Compare the task's trace ID and execution time with [Ace Data Cloud usage history](https://platform.acedata.cloud/console). Any `cost.amount` is in **Credits**, not USD. Check the current Grok Video price in your Ace Data Cloud account before executing; model, duration, resolution and account package affect the charge. A credentialed n8n result and bill have not yet been verified for this release.
+Compare the task's trace ID and execution time with [Ace Data Cloud usage history](https://platform.acedata.cloud/console?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=grokn8n_readme_console). Any `cost.amount` is in **Credits**, not USD. Check the current Grok Video price in your Ace Data Cloud account before executing; model, duration, resolution and account package affect the charge. A credentialed n8n result and bill have not yet been verified for this release.
 
 ## Other options and troubleshooting
 
