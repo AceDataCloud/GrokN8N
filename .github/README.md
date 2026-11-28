@@ -30,7 +30,7 @@ Copy only the application token. Do not include `Bearer `, quotation marks or a 
 
 ### 3. Save the credential in n8n
 
-Add **Grok Video by Ace Data Cloud** to a workflow. In **Credential**, select **Connect to Grok Video by Ace Data Cloud** and create a new credential. Paste the token into **API Token**. Set **Allowed HTTP Request Domains** to **Specific Domains → `api.acedata.cloud`** and save. Use the same credential on **Create** and **Get Task**.
+Add **Grok Video** to a workflow. In **Credential**, select **Connect to Grok Video** and create a new credential. Paste the token into **API Token**. Set **Allowed HTTP Request Domains** to **Specific Domains → `api.acedata.cloud`** and save. Use the same credential on **Create** and **Get Task**.
 
 The credential test calls the free `/openai/models` metadata route. It checks the token, while the first Grok Video call checks service access.
 

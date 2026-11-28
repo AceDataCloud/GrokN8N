@@ -239,12 +239,12 @@ async function request(context: IExecuteFunctions, endpoint: string, body: IData
 
 export class GrokVideo implements INodeType {
   description: INodeTypeDescription = {
-    displayName: 'Grok Video by Ace Data Cloud', name: 'grokVideo',
+    displayName: 'Grok Video', name: 'grokVideo',
     icon: { light: 'file:icon.svg', dark: 'file:icon.dark.svg' },
     group: ['transform'], version: 1,
     subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
     description: 'Generate a Grok video and retrieve the same task until it finishes',
-    defaults: { name: 'Grok Video by Ace Data Cloud' },
+    defaults: { name: 'Grok Video' },
     inputs: [NodeConnectionTypes.Main], outputs: [NodeConnectionTypes.Main],
     usableAsTool: true, credentials: [{ name: 'aceDataGrokVideoApi', required: true }], properties,
   };
@@ -259,7 +259,7 @@ export class GrokVideo implements INodeType {
           hasToken = typeof credentials.apiToken === 'string' && Boolean(credentials.apiToken.trim());
         } catch { /* n8n did not provide a credential. */ }
         if (!hasToken)
-          throw new NodeOperationError(this.getNode(), 'A Grok Video by Ace Data Cloud credential is required.');
+          throw new NodeOperationError(this.getNode(), 'A Grok Video credential is required.');
 
         const resource = this.getNodeParameter('resource', index) as string;
         const operation = this.getNodeParameter('operation', index) as string;

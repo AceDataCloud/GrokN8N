@@ -2,7 +2,7 @@ import type { IAuthenticateGeneric, ICredentialTestRequest, ICredentialType, INo
 
 export class AceDataGrokVideoApi implements ICredentialType {
   name = 'aceDataGrokVideoApi';
-  displayName = 'Grok Video by Ace Data Cloud API';
+  displayName = 'Grok Video API';
   documentationUrl = 'https://github.com/AceDataCloud/GrokN8N#credentials';
   icon = 'file:../nodes/GrokVideo/icon.svg' as const;
   properties: INodeProperties[] = [{
